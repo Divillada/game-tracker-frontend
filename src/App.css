@@ -1,0 +1,195 @@
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f7fa;
+}
+
+/* Barra de navegación superior */
+.navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-contenido {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-titulo {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-icono {
+  font-size: 32px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animación sutil del ícono */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-boton {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.nav-boton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.nav-boton.activo {
+  background: white;
+  color: #667eea;
+  border-color: white;
+}
+
+/* Contenido principal */
+.contenido-principal {
+  flex: 1;
+  width: 100%;
+}
+
+/* Vista de reseñas (placeholder por ahora) */
+.vista-resenas {
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.resenas-header {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.resenas-header h2 {
+  color: #333;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.btn-volver {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-volver:hover {
+  background: #5568d3;
+  transform: translateX(-3px);
+}
+
+.resenas-placeholder {
+  background: white;
+  border-radius: 16px;
+  padding: 80px 40px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.resenas-placeholder p {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.texto-secundario {
+  font-size: 16px !important;
+  color: #999 !important;
+}
+
+/* Footer */
+.footer {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  border-top: 1px solid #e0e0e0;
+  margin-top: auto;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-contenido {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .navbar-titulo {
+    font-size: 24px;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-boton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .resenas-placeholder {
+    padding: 40px 20px;
+  }
+
+  .resenas-placeholder p {
+    font-size: 18px;
+  }
+}
