@@ -1,0 +1,134 @@
+/* Estilos para el formulario de reseñas */
+.modal-resena {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.formulario-resena {
+  padding: 30px;
+}
+
+/* Textarea para el texto de la reseña */
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.2s ease;
+  line-height: 1.6;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-textarea::placeholder {
+  color: #999;
+}
+
+/* Texto de ayuda debajo de los campos */
+.form-ayuda {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+}
+
+/* Contador de calificación */
+.calificacion-texto {
+  color: #667eea;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+/* Estrellas en el formulario de reseñas */
+.estrellas-container-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  justify-content: center;
+}
+
+.estrella-form {
+  font-size: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.estrella-form.llena {
+  color: #FFC107;
+  transform: scale(1.1);
+  filter: drop-shadow(0 2px 4px rgba(255, 193, 7, 0.4));
+}
+
+.estrella-form.vacia {
+  color: #ddd;
+}
+
+.estrella-form:hover {
+  transform: scale(1.15);
+}
+
+/* Scrollbar personalizado para el modal */
+.modal-resena::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-resena::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.modal-resena::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.modal-resena::-webkit-scrollbar-thumb:hover {
+  background: #5568d3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-resena {
+    max-height: 95vh;
+  }
+
+  .formulario-resena {
+    padding: 20px;
+  }
+
+  .estrella-form {
+    font-size: 32px;
+  }
+
+  .form-textarea {
+    font-size: 15px;
+  }
+}
