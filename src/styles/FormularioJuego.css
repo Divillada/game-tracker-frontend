@@ -161,7 +161,9 @@
   border-radius: 10px;
   background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
   outline: none;
-  -webkit-appearance: none;
+  -webkit-appearance: none; /* WebKit (Chrome, Safari) */
+  -moz-appearance: none;    /* Gecko (Firefox) */
+  appearance: none;         /* Estándar */
   cursor: pointer;
 }
 
