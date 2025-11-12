@@ -24,24 +24,14 @@
 .navbar-contenido {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 20px 30px;
+  padding: 15px 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* mueve el menú a la derecha */
   align-items: center;
-}
-
-.navbar-titulo {
-  color: white;
-  font-size: 28px;
-  font-weight: 700;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 12px;
 }
 
 .navbar-icono {
-  font-size: 32px;
+  font-size: 28px;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -106,7 +96,7 @@
 .resenas-header h2 {
   color: #333;
   font-size: 28px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .btn-volver {
@@ -167,12 +157,8 @@
 @media (max-width: 768px) {
   .navbar-contenido {
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .navbar-titulo {
-    font-size: 24px;
+    gap: 15px;
+    padding: 15px;
   }
 
   .navbar-menu {
