@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import BibliotecaJuegos from './components/BibliotecaJuegos';
+import ListaResenas from './components/ListaResenas';
 import './App.css';
 
 function App() {
@@ -52,23 +53,10 @@ function App() {
         {vistaActual === 'biblioteca' ? (
           <BibliotecaJuegos onVerResenas={handleVerResenas} />
         ) : (
-          <div className="vista-resenas">
-            <div className="resenas-header">
-              <button 
-                className="btn-volver"
-                onClick={handleVolverBiblioteca}
-              >
-                ← Volver a la biblioteca
-              </button>
-              <h2>Reseñas de {juegoSeleccionado?.nombre}</h2>
-            </div>
-            <div className="resenas-placeholder">
-              <p>🚧 Vista de reseñas en construcción</p>
-              <p className="texto-secundario">
-                Aquí podrás ver y agregar reseñas para {juegoSeleccionado?.nombre}
-              </p>
-            </div>
-          </div>
+          <ListaResenas 
+            juego={juegoSeleccionado} 
+            onVolver={handleVolverBiblioteca}
+          />
         )}
       </main>
 
