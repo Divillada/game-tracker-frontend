@@ -1,0 +1,153 @@
+/* Contenedor principal de la tarjeta de reseña */
+.tarjeta-resena {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid #667eea;
+}
+
+.tarjeta-resena:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Header de la reseña con autor y calificación */
+.resena-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.resena-autor-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Avatar decorativo del autor */
+.autor-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.autor-detalles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.autor-nombre {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.resena-fecha {
+  margin: 0;
+  font-size: 13px;
+  color: #999;
+}
+
+/* Calificación con estrellas */
+.resena-calificacion {
+  display: flex;
+  gap: 4px;
+}
+
+.resena-calificacion .estrella-llena {
+  color: #FFC107;
+  font-size: 20px;
+}
+
+.resena-calificacion .estrella-vacia {
+  color: #ddd;
+  font-size: 20px;
+}
+
+/* Contenido de la reseña */
+.resena-contenido {
+  margin-bottom: 15px;
+}
+
+.resena-texto {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  white-space: pre-wrap; 
+}
+
+/* Botones de acción */
+.resena-acciones {
+  display: flex;
+  gap: 10px;
+  padding-top: 15px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.btn-resena-editar,
+.btn-resena-eliminar {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-resena-editar {
+  background-color: #2196F3;
+  color: white;
+}
+
+.btn-resena-editar:hover {
+  background-color: #1976D2;
+  transform: translateY(-1px);
+}
+
+.btn-resena-eliminar {
+  background-color: #F44336;
+  color: white;
+}
+
+.btn-resena-eliminar:hover {
+  background-color: #D32F2F;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resena-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .resena-acciones {
+    flex-direction: column;
+  }
+
+  .btn-resena-editar,
+  .btn-resena-eliminar {
+    width: 100%;
+  }
+}
