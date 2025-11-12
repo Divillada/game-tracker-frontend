@@ -1,184 +1,38 @@
-/* Reset y estilos base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.App {
+  text-align: center;
 }
 
-.App {
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  color: #f5f7fa;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Barra de navegación superior */
-.navbar {
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar-contenido {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: flex-end; /* mueve el menú a la derecha */
   align-items: center;
-}
-
-.navbar-icono {
-  font-size: 28px;
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Animación sutil del ícono */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-}
-
-.navbar-menu {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.nav-boton {
-  background: rgba(255, 255, 255, 0.15);
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(8px);
 }
 
-.nav-boton:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.6);
-  transform: translateY(-2px);
+.App-link {
+  color: #61dafb;
 }
 
-.nav-boton.activo {
-  background: white;
-  color: #2575fc;
-  border-color: white;
-}
-
-/* Contenido principal */
-.contenido-principal {
-  flex: 1;
-  width: 100%;
-}
-
-/* Vista de reseñas */
-.vista-resenas {
-  max-width: 1400px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
-
-.resenas-header {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-}
-
-.resenas-header h2 {
-  color: #fff;
-  font-size: 28px;
-  margin-top: 10px;
-}
-
-.btn-volver {
-  background: linear-gradient(135deg, #2575fc, #6a11cb);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-volver:hover {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  transform: translateY(-3px);
-}
-
-.resenas-placeholder {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 80px 40px;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.resenas-placeholder p {
-  font-size: 24px;
-  color: #fff;
-  margin-bottom: 15px;
-}
-
-.texto-secundario {
-  font-size: 16px !important;
-  color: #aaa !important;
-}
-
-/* Footer */
-.footer {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  text-align: center;
-  color: #aaa;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: auto;
-  backdrop-filter: blur(6px);
-}
-
-.footer p {
-  margin: 0;
-  font-size: 14px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar-contenido {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-
-  .navbar-menu {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-boton {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .resenas-placeholder {
-    padding: 40px 20px;
-  }
-
-  .resenas-placeholder p {
-    font-size: 18px;
+  to {
+    transform: rotate(360deg);
   }
 }
