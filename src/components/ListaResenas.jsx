@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import TarjetaResena from './TarjetaResena';
-import FormularioResena from './FormularioResena';
+import TarjetaResena from './TarjetaResena.jsx';
+import FormularioResena from './FormularioResena.jsx';
 import { obtenerResenas, eliminarResena } from '../services/api';
 import '../styles/ListaResenas.css';
 

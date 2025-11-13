@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import TarjetaJuego from './TarjetaJuego';
-import FormularioJuego from './FormularioJuego';
+import TarjetaJuego from './TarjetaJuego.jsx';
+import FormularioJuego from './FormularioJuego.jsx';
 import { obtenerJuegos, eliminarJuego } from '../services/api';
 import '../styles/BibliotecaJuegos.css';
 
